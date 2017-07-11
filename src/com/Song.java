@@ -1,10 +1,10 @@
 package com;
 
-public class Song {
-    String title;
-    String artist;
-    String rating;
-    String bpm;
+public class Song implements Comparable<Song> {
+    private String title;
+    private String artist;
+    private String rating;
+    private String bpm;
 
     Song(String t, String a, String r, String b) {
         title = t;
@@ -30,6 +30,11 @@ public class Song {
     }
 
     public String toString() {
-        return title;
+        return artist + " - " + title;
+    }
+
+    @Override
+    public int compareTo(Song o) {
+        return title.compareTo(o.getTitle());
     }
 }
