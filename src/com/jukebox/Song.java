@@ -1,4 +1,4 @@
-package com;
+package com.jukebox;
 
 public class Song implements Comparable<Song> {
     private String title;
